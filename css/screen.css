@@ -1,0 +1,1475 @@
+/*------------------------------------*\
+#FONTS
+\*------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+:root {
+  --global-color-neutral-x-light: #b5b6c0;
+
+  /* border radius */
+
+  --global-borderWidth: 1px;
+
+  /* shadow */
+  --global-card-boxShadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+
+  /* transitions */
+  --global-transitionEasing-out: ease-out;
+  --global-transitionDuration-alpha: 0.1s;
+
+  /* Baseline settings */
+  --global-baseline: 8px;
+
+  --global-whitespace-xs: calc(var(--global-baseline) * 0.5); /* = 4px */
+  --global-whitespace-sm: calc(var(--global-baseline) * 1); /*  = 8px */
+  --global-whitespace-md: calc(var(--global-baseline) * 2); /*  = 16px */
+  --global-whitespace: calc(var(--global-baseline) * 3);
+  --global-whitespace-lg: calc(var(--global-baseline) * 4); /*  = 32px */
+  --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
+  --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
+
+  /* forms */
+  --global-input-hover-borderColor: var(--global-color-neutral-xx-light);
+  --global-input-focus-boxShadowSpread: 0 0 0 3px;
+}
+
+/*------------------------------------*\
+#GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Nunito", sans-serif;
+  color: black;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+* #Background color
+*/
+
+::-moz-selection {
+  /* background: #3385ff; */
+  background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  /* background: #3385ff; */
+  background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+  color: white;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+#Elements
+\*------------------------------------*/
+
+/*
+Elements: Images
+---
+Default markup for images to make them responsive
+*/
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  color: white;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 48px;
+  margin: 0 0 var(--global-whitespace);
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 900;
+  margin: 0 0 var(--global-whitespace);
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 32px;
+  margin: 0 0 var(--global-whitespace);
+}
+
+h4,
+h5,
+h6 {
+  font-size: 20px;
+  line-height: var(--global-whitespace);
+  margin: 0 0 var(--global-whitespace);
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+  margin: 0 0 var(--global-whitespace);
+}
+
+ul,
+ol {
+  padding-left: var(--global-whitespace);
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-style: normal;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 var(--global-whitespace);
+}
+
+blockquote * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+figcaption {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 8px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: white;
+  margin-top: 8px;
+  margin-bottom: var(--global-whitespace);
+}
+
+a {
+  color: #3385ff;
+  transition: all 0.1s ease-in-out;
+}
+
+a:visited,
+a:active {
+  color: hsla(216, 80, 100, 0.3);
+}
+
+a:hover,
+a:focus {
+  color: hsla(216, 80, 100, 0.3);
+}
+
+label,
+input {
+  display: block;
+}
+
+#thermometer .goal {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#thermometer .amount {
+  border-top: 1px solid #00c9ff;
+  /* color: black; */
+  display: inline-block;
+
+  font-weight: bold;
+  padding: 0 75px 0 0;
+}
+#thermometer .progress .amount {
+  border-top: 1px solid#00c9ff;
+  /* color: #006600; */
+  left: 0;
+  padding: 0 0 0 75px;
+  position: absolute;
+}
+#thermometer {
+  border-radius: 12px;
+  /* height: 300px;
+  margin-top: 140px; */
+  position: relative;
+}
+#thermometer .track {
+  background: #e5e5e5 none repeat scroll 0 0;
+
+  border-radius: 8px;
+  height: 280px;
+  /* left: 10px; */
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+  width: 30px;
+}
+#thermometer .progress {
+  background: #00c9ff none repeat scroll 0 0;
+  border-radius: 23px 23px 0 0;
+  bottom: 0;
+  height: 0;
+  left: 5px;
+  margin-bottom: 0 !important;
+  position: absolute;
+  width: 69%;
+  z-index: 100;
+}
+#thermometer .goal {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#thermometer .minimum {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+}
+
+#thermometer .nulpunt {
+  position: absolute;
+  right: 0;
+  margin-top: 175px;
+}
+#thermometer .amount {
+  border-top: 1px solid#00c9ff;
+  /* color: black; */
+  display: inline-block;
+  /* font-family: Trebuchet MS;
+  font-weight: bold; */
+  padding: 0 75px 0 0;
+}
+#thermometer .progress .amount {
+  border-top: 1px solid#00c9ff;
+  /* color: #006600; */
+  left: 0;
+  padding: 0 0 0 75px;
+  position: absolute;
+}
+
+::placeholder {
+  color: var(--global-color-neutral-x-light);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 50px;
+  margin: 0;
+}
+
+li {
+  display: block;
+  position: relative;
+  padding: 20px 0px;
+  width: 100%;
+}
+
+h2 {
+  margin: 10px 0;
+  font-weight: 900;
+}
+
+/* Card
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.card {
+  /* display: flex;
+  flex-direction: column; */
+  background: var(--white);
+  width: 50%;
+  margin-top: 50px;
+  /* margin-right: 0 !important ; */
+  padding: 20px 25px;
+  border-radius: 20px;
+  /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13); */
+  float: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Radio Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  font-weight: 400;
+  text-align: left;
+}
+
+.check {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Reset */
+input#celsius ~ .check {
+  transform: translate(-50px, -25px);
+
+  background: #00c8ff52;
+}
+input#fahrenheit ~ .check {
+  transform: translate(-50px, -83px);
+  background: #00c9ff;
+  box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
+}
+
+/* Radio Input #1 */
+input#celsius:checked ~ .check {
+  transform: translate(-50px, 33px);
+}
+
+/* Radio Input #2  */
+input#fahrenheit:checked ~ .check {
+  transform: translate(-50px, -25px);
+}
+
+/*------------------------------------*\
+#OBJECTS
+\*------------------------------------*/
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+
+.o-row {
+  position: relative;
+  padding: 16px 16px 0;
+}
+
+.o-row--body {
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .o-row--body {
+    min-height: 70vh;
+  }
+}
+.o-row--lg {
+  padding-top: 48px;
+  padding-bottom: var(--global-whitespace);
+}
+
+.o-row--xl {
+  padding-top: 72px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .o-row {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  .o-row--xl {
+    padding-top: 96px;
+    padding-bottom: 72px;
+  }
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--global-whitespace-lg);
+  max-width: 79.5em; /* 79.5 * 16px = 1272 */
+  width: 100%;
+}
+
+.o-box {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+}
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+  position: relative;
+}
+
+.o-section + .o-section {
+  padding-top: var(--global-whitespace);
+}
+
+@media (min-width: 768px) {
+  .o-section--lg + .o-section--lg,
+  .o-section--xl + .o-section--xl {
+    padding-top: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  .o-section--xl + .o-section--xl {
+    padding-top: 72px;
+  }
+}
+
+/*
+    Objects: Layout
+    ---
+    The layout object provides us with a column-style layout system. This object
+    contains the basic structural elements, but classes should be complemented
+    with width utilities
+*/
+
+.o-layout {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.o-layout__item {
+  width: 100%;
+  align-content: center;
+}
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+  margin: 0 -12px;
+}
+
+.o-layout--gutter > .o-layout__item {
+  padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+  margin: 0 -6px;
+}
+
+.o-layout--gutter-sm > .o-layout__item {
+  padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+  margin: 0 - (var(--global-whitespace));
+}
+
+.o-layout--gutter-lg > .o-layout__item {
+  padding: 0 var(--global-whitespace);
+}
+
+.o-layout--gutter-xl {
+  margin: 0 -48px;
+}
+
+.o-layout--gutter-xl > .o-layout__item {
+  padding: 0 48px;
+}
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+  justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+  justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+  justify-content: center;
+}
+
+.o-layout--justify-space-around {
+  justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+  justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+  align-items: flex-start;
+}
+
+.o-layout--align-end {
+  align-items: flex-end;
+}
+
+.o-layout--align-center {
+  align-items: center;
+  align-content: center;
+}
+
+@media (min-width: 768px) {
+  .o-layout--align-center {
+    align-items: center;
+    align-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .o-layout--align-center {
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.o-layout--align-baseline {
+  align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+
+.o-layout--align-content-start {
+  align-content: start;
+}
+
+.o-layout--align-content-end {
+  align-content: end;
+}
+
+.o-layout--align-content-center {
+  align-content: center;
+}
+
+.o-layout--align-content-space-around {
+  align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+  align-content: space-between;
+}
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+  list-style: none;
+  padding: 0;
+}
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+/*------------------------------------*\
+#COMPONENTS
+\*------------------------------------*/
+/*
+    Component: subtitle
+*/
+.c-subtitle-description {
+  font-weight: 600;
+  line-height: var(--global-whitespace);
+  font-size: var(--global-whitespace-lg);
+  margin-bottom: var(--global-whitespace-lg);
+}
+
+.c-subtitle {
+  font-weight: 600;
+  line-height: var(--global-whitespace);
+  font-size: var(--global-whitespace-lg);
+  margin-bottom: var(--global-whitespace-md);
+}
+
+.c-subtext {
+  width: 100%;
+  color: white;
+}
+
+.c-subtext-temp {
+  width: 100%;
+  font-size: var(--global-whitespace-xl);
+}
+
+/* only for iPhone 5S and SE :) */
+@media (max-width: 320px) {
+  .c-subtext {
+    font-size: var(--global-whitespace);
+    line-height: 16px;
+  }
+}
+
+@media (min-width: 576px) {
+  .c-subtitle {
+    font-size: var(--global-whitespace-xl);
+  }
+}
+
+/*
+    Component: mockup
+    ---
+  shows mockup of application
+*/
+.c-mockup {
+  height: 316px;
+  width: 144px;
+  margin-bottom: 42px;
+}
+@media (min-width: 768px) {
+  .c-mockup {
+    width: 232px;
+    height: 509px;
+  }
+}
+
+/*
+    Component: intro-text
+    ---
+    Website intro text under the logo
+*/
+.c-intro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.c-intro-text {
+  line-height: var(--global-whitespace);
+  text-align: center;
+  margin-bottom: var(--global-whitespace);
+  width: 100%;
+}
+
+.c-date-text {
+  line-height: var(--global-whitespace);
+  text-align: center;
+  /* margin-bottom: var(--global-whitespace-xxl); */
+  width: 100%;
+}
+/* only for iPhone 5 and SE */
+@media (max-width: 320px) {
+  .c-intro-text {
+    font-size: 14px;
+    line-height: var(--global-whitespace-md);
+  }
+}
+@media (min-width: 768px) {
+  .c-intro-text {
+    width: 567px;
+  }
+}
+@media (min-width: 768px) {
+  .c-intro-text {
+    line-height: 29px;
+    width: 599px;
+  }
+}
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: var(--global-whitespace-md);
+  height: var(--global-whitespace);
+  min-width: 100%;
+}
+
+.c-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* margin-top: 40px; */
+  margin-bottom: var(--global-whitespace-md);
+  height: 200px;
+}
+
+.card-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wicon {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .c-logo {
+    height: 42px;
+  }
+}
+
+@media (max-width: 320px) {
+  .c-logo {
+    margin-top: var(--global-whitespace-lg);
+  }
+}
+
+/*
+    Component: info
+    ---
+    
+*/
+
+@media (min-width: 768px) {
+  .c-info {
+    margin-top: 0;
+  }
+}
+
+/*
+    Component: Card
+    ---
+    Card with box shadow
+*/
+
+.c-card {
+  overflow: hidden;
+  background: white;
+  padding-top: 40px;
+  padding-bottom: 0px;
+  border-radius: 16px;
+  box-shadow: var(--global-card-boxShadow);
+}
+
+.c-card__body,
+.c-card__footer {
+  padding: var(--global-whitespace);
+}
+
+.c-card__footer {
+  border-top: 1px solid #e2e3e7;
+  color: #757787;
+}
+
+.c-card__title {
+  font-size: 18px;
+}
+
+.c-card__body > *:last-child,
+.c-card__footer > *:last-child,
+.c-card__body > *:last-child > *:last-child,
+.c-card__footer > *:last-child > *:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 27em) {
+  .c-card__body {
+    padding: 48px;
+  }
+  .c-card__title {
+    margin-bottom: 48px;
+  }
+}
+
+@-webkit-keyframes placeHolderShimmer {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@-moz-keyframes placeHolderShimmer {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+/*
+    Component: Forms
+    ---
+    Everything form related here
+*/
+.c-form {
+  /* min-height: 70vh; */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.c-form-field {
+  position: relative;
+}
+
+.c-form-field--option {
+  display: flex;
+  align-items: center;
+}
+
+.has-error {
+  --error-message-display: flex;
+}
+
+/*
+    Component: Input
+    ---
+    Class to put on all input="text" like form inputs
+*/
+
+.c-input {
+  --input-transition: all var(--global-transitionDuration-alpha)
+    var(--global-transitionEasing-out);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+
+  border-radius: 8px;
+  border: hidden 1px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: calc(var(--global-baseline) * 3);
+
+  padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth))
+    var(--global-whitespace-md);
+
+  outline: none;
+  transition: var(--input-transition);
+  margin-bottom: 8px;
+}
+
+.c-input:hover {
+  border-color: var(
+    --input-hover-borderColor,
+    var(--global-input-hover-borderColor)
+  );
+}
+
+.c-input:focus,
+.c-input:active {
+  border-color: black;
+  box-shadow: var(--global-input-focus-boxShadowSpread) rgba(0, 0, 0, 0.5);
+}
+
+/*
+Input password with toggle checkbox on top of it needs
+more padding on the right to avoid overlap
+*/
+
+/* input password with floating label */
+
+/* option input for checkboxes and radio buttons */
+
+.c-option {
+  margin-right: var(--global-whitespace-sm);
+}
+
+/*
+    Component: Label
+    ---
+    Class to put on all form labels
+*/
+
+.c-label {
+  margin-bottom: 0;
+  font-size: 14px;
+  float: left;
+  padding-bottom: var(--global-whitespace-sm);
+  line-height: calc(var(--global-baseline) * 2);
+  color: white;
+  font-family: "Montserrat", Helvetica, arial, sans-serif;
+}
+
+.c-label--option {
+  padding-bottom: 0;
+}
+
+.c-label__error-message {
+  font-weight: 600;
+  float: right;
+  display: var(--error-message-display, none);
+}
+
+/*
+    Component: Button
+    ---
+    Class to put on form buttons or
+*/
+
+.c-button {
+  cursor: pointer;
+
+  font-weight: 400;
+
+  height: var(--global-whitespace-xl);
+
+  border: none;
+  outline: none;
+  border-radius: 8px;
+
+  background-color: rgba(12, 12, 12, 0.9);
+  color: #fff;
+
+  padding: calc(
+      var(--global-baseline) * 1.5 -
+        var(--button-borderWidth, var(--global-borderWidth))
+    )
+    var(--global-whitespace-md);
+
+  line-height: calc(var(--global-baseline) * 3);
+
+  width: 100%;
+
+  transition: all var(--global-transitionDuration-alpha)
+    var(--global-transitionEasing-out);
+
+  margin-bottom: var(--global-whitespace-xl);
+}
+
+.c-button:hover {
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+.c-button:focus {
+  background-color: rgba(5, 5, 5, 0.9);
+}
+
+.c-button:active {
+  background-color: black;
+}
+
+/*------------------------------------*\
+#UTILITIES
+\*------------------------------------*/
+
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
+
+.u-color-neutral-base {
+  color: Silver;
+}
+
+.u-color-neutral-dark {
+  color: Black;
+}
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+  padding-top: 0 !important;
+}
+
+.u-mb-clear {
+  margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+  margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+  margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+  margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+  margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+  margin-bottom: 48px !important;
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-xs {
+  max-width: 27em !important;
+}
+
+.u-max-width-sm {
+  max-width: 39em !important;
+}
+
+.u-max-width-md {
+  max-width: 50em !important;
+}
+
+.u-max-width-lg {
+  max-width: 63.5em !important;
+}
+
+.u-max-width-none {
+  max-width: none !important;
+}
+
+/*
+    Utilities: align
+    ---
+    Utility classes align text or components
+*/
+
+.u-text-align-center {
+  text-align: center;
+}
+
+.u-align-center {
+  margin: 0 auto;
+}
+
+/*
+    Utilities: text
+    Utility classes to create smaller or bigger test
+*/
+
+.u-text-sm {
+  font-size: 14px;
+}
+
+/*
+    Utility: Widths
+    ---
+    Utility classes to put specific widths onto elements
+    Will be mostly used on o-layout__item
+*/
+
+.u-width-auto {
+  width: auto !important;
+}
+
+.u-1-of-2 {
+  width: 50% !important;
+}
+
+.u-1-of-3 {
+  width: 33.3333333333% !important;
+}
+
+.u-2-of-3 {
+  width: 66.6666666667% !important;
+}
+
+.u-1-of-4 {
+  width: 25% !important;
+}
+
+.u-3-of-4 {
+  width: 75% !important;
+}
+
+.u-1-of-5 {
+  width: 20% !important;
+}
+
+.u-2-of-5 {
+  width: 40% !important;
+}
+
+.u-3-of-5 {
+  width: 60% !important;
+}
+
+.u-4-of-5 {
+  width: 80% !important;
+}
+
+.u-1-of-6 {
+  width: 16.6666666667% !important;
+}
+
+.u-5-of-6 {
+  width: 83.3333333333% !important;
+}
+
+@media (min-width: 576px) {
+  .u-1-of-2-bp1 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp1 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp1 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp1 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp1 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp1 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp1 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp1 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp1 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp1 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp1 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .u-1-of-2-bp2 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp2 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp2 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp2 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp2 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp2 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp2 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp2 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp2 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp2 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp2 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .u-1-of-2-bp3 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp3 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp3 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp3 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp3 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp3 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp3 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp3 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp3 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp3 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp3 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .u-1-of-2-bp4 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp4 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp4 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp4 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp4 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp4 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp4 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp4 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp4 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp4 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp4 {
+    width: 83.3333333333% !important;
+  }
+}
+
+/*------------------------------------*\
+#MEDIA
+\*------------------------------------*/
+
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    USE THEM INLINE!
+*/
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in mobile first design
+*/
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
+
+/*
+    Print styles.
+    ---
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+        http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+    * Don't show links that are fragment identifiers,
+    * or use the `javascript:` pseudo protocol
+    */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+    * Printing Tables:
+    * http://css-discuss.incutio.com/wiki/Printing_Tables
+    */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
