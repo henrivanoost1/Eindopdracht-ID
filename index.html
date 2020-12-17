@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta name="description" content="Een applicatie om het huidige weer te meten in Machelen aan de Leie" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- styling -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+   
+    <!-- script -->
+    <script src="./script/app.js"></script>
+    <title>Machelen Weerradar</title>
+  
+  </head>
+  <body>
+    <section class="o-row u-pt-clear">
+      <div class="o-container ">
+        <h1 class="c-logo">
+          Machelen Weerradar
+        </h1>
+        <div class="c-intro">
+          <p class="c-intro-text">
+            Machelen Weerrader toont het weer van de dag. 
+            <br>
+            Speciaal gemaakt door een Moalneir voor de Moalneirs!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="o-row o-row--body u-pt-clear u-text-align-center">
+      <div class="o-container u-max-width--xl">
+        <div class="o-layout o-layout--row-reverse o-layout--justify-center o-layout--align-center">
+          <div class="o_layout__item u-1-of-2-bp2 ">
+            <img class="c-mockup" src="./img/Mockup.png" alt="mockup" />
+          </div>
+          <div class="o_layout__item u-1-of-2-bp2 c-form o-layout--align-center">
+            <form action="weather.html">
+              <h2 class="c-subtitle">Blijf altijd up-to-date!</h2>
+              <p class="c-subtext">
+                Registreer vandaag nog en krijg de laatste nieuwtjes binnen!
+              </p>
+              <p class="c-form-field js-username-field">
+                <label class="c-label " for="username">
+                  Email
+                </label>
+                <span class="c-label__error-message js-username-error-message">
+                  Dit veld is vereist
+                </span>
+                <input class="c-input js-username-input c-input--with-floating-label js-floating-input" type="email" name="username" id="username" placeholder="Voorbeeld: john.doe@mail.be"required />
+              </p>
+
+              <button class="o-button-reset c-button js-sign-in-button">Registreer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+</div>

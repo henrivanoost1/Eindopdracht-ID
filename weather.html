@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Machelen Weerradar</title>
+    <meta
+      name="description"
+      content="Een applicatie om het huidige weer te meten in Machelen aan de Leie"
+    />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- styling -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+    <!-- font -->
+    <!-- <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap"
+    rel="stylesheet"
+  /> -->
+    <!-- script -->
+    <script src="./script/weather.js"></script>
+    <title>Weer Machelen</title>
+  </head>
+  <body>
+    <section class="o-row u-pt-clear">
+      <div class="o-container">
+        <h1 class="c-logo">Machelen Weerradar</h1>
+        <div class="c-intro">
+          <h3 class="c-date-text">
+            <span class="datetime"></span>
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="o-row o-row--body u-pt-clear u-text-align-center">
+      <div class="o-container u-max-width--xl o-box">
+        <div
+          class="o-layout o-layout--justify-center o-layout--align-center c-card"
+        >
+          <div
+            class="o_layout__item u-1-of-2-bp2 o-container u-pt-clear o-row o-layout--align-center"
+          >
+            <div id="thermometer">
+              <div class="track">
+                <div class="goal">
+                  <div class="amount js-top" id="goalAmount">50°C</div>
+                </div>
+
+                <div class="nulpunt">
+                  <!-- <div class="amount" id="goalAmount">50°C</div> -->
+                  <div class="amount middenamount js-middel" id="goalAmount">
+                    0°C
+                  </div>
+                </div>
+                <div class="minimum">
+                  <!-- <div class="amount" id="goalAmount">50°C</div> -->
+                  <div class="amount middenamount js-bottom" id="goalAmount">
+                    -30°C
+                  </div>
+                </div>
+                <div class="progress">
+                  <div style="display: block" class="amount" id="progessAmount">
+                    <p class="js-temp"></p>
+                  </div>
+                </div>
+                <!-- <div class="bulb"><div class="inner-bulb"></div></div> -->
+              </div>
+            </div>
+            <div class="card-align">
+              <div class="card">
+                <ul>
+                  <li>
+                    <input
+                      type="radio"
+                      name="name"
+                      class=""
+                      id="celsius"
+                      value="celsius"
+                      onclick="changetoCelsius()"
+                      checked
+                    />
+                    <label for="celsius">Celsius</label>
+
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input
+                      type="radio"
+                      name="name"
+                      id="fahrenheit"
+                      value="fahrenheit"
+                      class="js-fahrenheitbtn"
+                      onclick="changetoFahrenheit()"
+                    />
+                    <label for="fahrenheit" class="js-fahrenheitbtn"
+                      >Fahrenheit</label
+                    >
+
+                    <div class="check"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="o_layout__item u-1-of-2-bp2 c-info u-pt-clear o-row o-layout--align-center o-container"
+          >
+            <div class="c-icon" id="icon">
+              <img id="wicon" class="wicon" src="" alt="weer icoon" />
+            </div>
+            <p class="js-desc c-subtitle-description">test</p>
+            <p class="js-temptext c-subtitle-description">test</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  </body>
+</html>
