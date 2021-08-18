@@ -9,6 +9,7 @@
 
 :root {
   --global-color-neutral-x-light: #b5b6c0;
+  --global-fontSize: 16px;
 
   /* border radius */
 
@@ -48,7 +49,7 @@
 */
 
 html {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   font-family: "Nunito", sans-serif;
   color: black;
@@ -111,29 +112,29 @@ h3 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 800;
-  line-height: 48px;
+  line-height: 3rem;
   margin: 0 0 var(--global-whitespace);
 }
 
 h2 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: 900;
   margin: 0 0 var(--global-whitespace);
 }
 
 h3 {
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 1.625rem;
+  line-height: 2rem;
   margin: 0 0 var(--global-whitespace);
 }
 
 h4,
 h5,
 h6 {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: var(--global-whitespace);
   margin: 0 0 var(--global-whitespace);
 }
@@ -160,8 +161,8 @@ li ol {
 
 blockquote {
   font-style: normal;
-  font-size: 23px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin: 0 0 var(--global-whitespace);
 }
 
@@ -172,16 +173,16 @@ blockquote * {
 
 figcaption {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  margin-top: 8px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-top: 0.5rem;
 }
 
 hr {
   border: 0;
-  height: 1px;
+  height: 0.0625rem;
   background: white;
-  margin-top: 8px;
+  margin-top: 0.5rem;
   margin-bottom: var(--global-whitespace);
 }
 
@@ -211,22 +212,22 @@ input {
   top: 0;
 }
 #thermometer .amount {
-  border-top: 1px solid #00c9ff;
+  border-top: var(--global-borderWidth) solid #00c9ff;
   /* color: black; */
   display: inline-block;
 
   font-weight: bold;
-  padding: 0 75px 0 0;
+  padding: 0 4.6875rem 0 0;
 }
 #thermometer .progress .amount {
-  border-top: 1px solid#00c9ff;
+  border-top: 4.6875rem solid#00c9ff;
   /* color: #006600; */
   left: 0;
-  padding: 0 0 0 75px;
+  padding: 0 0 0 4.6875rem;
   position: absolute;
 }
 #thermometer {
-  border-radius: 12px;
+  border-radius: 0.75rem;
   /* height: 300px;
   margin-top: 140px; */
   position: relative;
@@ -234,20 +235,20 @@ input {
 #thermometer .track {
   background: #e5e5e5 none repeat scroll 0 0;
 
-  border-radius: 8px;
-  height: 280px;
-  /* left: 10px; */
+  border-radius: 0.5rem;
+  height: 17.5rem;
+  /* left: 0.625rem; */
   margin: 0 auto;
   position: relative;
-  top: 10px;
-  width: 30px;
+  top: 0.625rem;
+  width: 1.875rem;
 }
 #thermometer .progress {
   background: #00c9ff none repeat scroll 0 0;
-  border-radius: 23px 23px 0 0;
+  border-radius: 1.5rem 1.5rem 0 0;
   bottom: 0;
   height: 0;
-  left: 5px;
+  left: 0.3125rem;
   margin-bottom: 0 !important;
   position: absolute;
   width: 69%;
@@ -261,27 +262,27 @@ input {
 #thermometer .minimum {
   position: absolute;
   right: 0;
-  bottom: -25px;
+  bottom: -1.5625rem;
 }
 
 #thermometer .nulpunt {
   position: absolute;
   right: 0;
-  margin-top: 175px;
+  margin-top: 10.9375rem;
 }
 #thermometer .amount {
-  border-top: 1px solid#00c9ff;
+  border-top: var(--global-borderWidth) solid#00c9ff;
   /* color: black; */
   display: inline-block;
   /* font-family: Trebuchet MS;
   font-weight: bold; */
-  padding: 0 75px 0 0;
+  padding: 0 4.6875rem 0 0;
 }
 #thermometer .progress .amount {
-  border-top: 1px solid#00c9ff;
+  border-top: var(--global-borderWidth) solid#00c9ff;
   /* color: #006600; */
   left: 0;
-  padding: 0 0 0 75px;
+  padding: 0 0 0 4.6875rem;
   position: absolute;
 }
 
@@ -291,19 +292,19 @@ input {
 
 ul {
   list-style-type: none;
-  padding-left: 50px;
+  padding-left: 3.125rem;
   margin: 0;
 }
 
 li {
   display: block;
   position: relative;
-  padding: 20px 0px;
+  padding: 1.25rem 0rem;
   width: 100%;
 }
 
 h2 {
-  margin: 10px 0;
+  margin: 0.625rem 0;
   font-weight: 900;
 }
 
@@ -314,10 +315,10 @@ h2 {
   flex-direction: column; */
   background: var(--white);
   width: 50%;
-  margin-top: 50px;
+  margin-top: 3.125rem;
   /* margin-right: 0 !important ; */
-  padding: 20px 25px;
-  border-radius: 20px;
+  padding: 1.25rem 1.5625rem;
+  border-radius: 1.25rem;
   /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13); */
   float: center;
   justify-content: center;
@@ -341,8 +342,8 @@ label {
 }
 
 .check {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   position: absolute;
   border-radius: 50%;
   transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -350,24 +351,24 @@ label {
 
 /* Reset */
 input#celsius ~ .check {
-  transform: translate(-50px, -25px);
+  transform: translate(-3.125rem, -1.5625rem);
 
   background: #00c8ff52;
 }
 input#fahrenheit ~ .check {
-  transform: translate(-50px, -83px);
+  transform: translate(-3.125rem, -5.7rem);
   background: #00c9ff;
-  box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
+  box-shadow: 0 0.375rem 0.75rem rgba(33, 150, 243, 0.35);
 }
 
 /* Radio Input #1 */
 input#celsius:checked ~ .check {
-  transform: translate(-50px, 33px);
+  transform: translate(-3.125rem, 2.0625rem);
 }
 
 /* Radio Input #2  */
 input#fahrenheit:checked ~ .check {
-  transform: translate(-50px, -25px);
+  transform: translate(-3.125rem, -1.5625rem);
 }
 
 /*------------------------------------*\
@@ -411,7 +412,7 @@ input#fahrenheit:checked ~ .check {
 
 .o-row {
   position: relative;
-  padding: 16px 16px 0;
+  padding: 1rem 1rem 0;
 }
 
 .o-row--body {
@@ -426,26 +427,26 @@ input#fahrenheit:checked ~ .check {
   }
 }
 .o-row--lg {
-  padding-top: 48px;
+  padding-top: 3rem;
   padding-bottom: var(--global-whitespace);
 }
 
 .o-row--xl {
-  padding-top: 72px;
-  padding-bottom: 48px;
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
   .o-row {
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
 @media (min-width: 992px) {
   .o-row--xl {
-    padding-top: 96px;
-    padding-bottom: 72px;
+    padding-top: 6rem;
+    padding-bottom: 4.5rem;
   }
 }
 
@@ -459,12 +460,12 @@ input#fahrenheit:checked ~ .check {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: var(--global-whitespace-lg);
-  max-width: 79.5em; /* 79.5 * 16px = 1272 */
+  max-width: 79.5em; /* 79.5 * 1rem = 1272 */
   width: 100%;
 }
 
 .o-box {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 1.1875rem 2.375rem rgba(0, 0, 0, 0.13);
 }
 /*
     Objects: section
@@ -483,13 +484,13 @@ input#fahrenheit:checked ~ .check {
 @media (min-width: 768px) {
   .o-section--lg + .o-section--lg,
   .o-section--xl + .o-section--xl {
-    padding-top: 48px;
+    padding-top: 3rem;;
   }
 }
 
 @media (min-width: 992px) {
   .o-section--xl + .o-section--xl {
-    padding-top: 72px;
+    padding-top: 2.5rem;;
   }
 }
 
@@ -516,19 +517,19 @@ input#fahrenheit:checked ~ .check {
 /* gutter modifiers, these affect o-layout__item too */
 
 .o-layout--gutter {
-  margin: 0 -12px;
+  margin: 0 -0.75rem;
 }
 
 .o-layout--gutter > .o-layout__item {
-  padding: 0 12px;
+  padding: 0 0.75rem;
 }
 
 .o-layout--gutter-sm {
-  margin: 0 -6px;
+  margin: 0 -0.375rem;;
 }
 
 .o-layout--gutter-sm > .o-layout__item {
-  padding: 0 6px;
+  padding: 0 0.375rem;;
 }
 
 .o-layout--gutter-lg {
@@ -540,11 +541,11 @@ input#fahrenheit:checked ~ .check {
 }
 
 .o-layout--gutter-xl {
-  margin: 0 -48px;
+  margin: 0 -3rem;;
 }
 
 .o-layout--gutter-xl > .o-layout__item {
-  padding: 0 48px;
+  padding: 0 3rem;;
 }
 
 /* reverse horizontal row modifier */
@@ -708,7 +709,7 @@ input#fahrenheit:checked ~ .check {
 @media (max-width: 320px) {
   .c-subtext {
     font-size: var(--global-whitespace);
-    line-height: 16px;
+    line-height: 1rem;
   }
 }
 
@@ -724,14 +725,14 @@ input#fahrenheit:checked ~ .check {
   shows mockup of application
 */
 .c-mockup {
-  height: 316px;
-  width: 144px;
-  margin-bottom: 42px;
+  height: 19.75rem;
+  width: 9rem;
+  margin-bottom: 2.625rem;
 }
 @media (min-width: 768px) {
   .c-mockup {
-    width: 232px;
-    height: 509px;
+    width: 14.5rem;
+    height: 31.8125rem;
   }
 }
 
@@ -763,19 +764,19 @@ input#fahrenheit:checked ~ .check {
 /* only for iPhone 5 and SE */
 @media (max-width: 320px) {
   .c-intro-text {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: var(--global-whitespace-md);
   }
 }
 @media (min-width: 768px) {
   .c-intro-text {
-    width: 567px;
+    width: 35.4375rem;
   }
 }
 @media (min-width: 768px) {
   .c-intro-text {
     line-height: 29px;
-    width: 599px;
+    width: 37.5rem;
   }
 }
 
@@ -789,7 +790,7 @@ input#fahrenheit:checked ~ .check {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 2.5rem;
   margin-bottom: var(--global-whitespace-md);
   height: var(--global-whitespace);
   min-width: 100%;
@@ -800,9 +801,9 @@ input#fahrenheit:checked ~ .check {
   align-items: center;
   justify-content: center;
 
-  /* margin-top: 40px; */
+  /* margin-top: 2.5rem; */
   margin-bottom: var(--global-whitespace-md);
-  height: 200px;
+  height: 12.5rem;
 }
 
 .card-align {
@@ -817,7 +818,7 @@ input#fahrenheit:checked ~ .check {
 
 @media (min-width: 768px) {
   .c-logo {
-    height: 42px;
+    height: 2.625rem;
   }
 }
 
@@ -848,9 +849,9 @@ input#fahrenheit:checked ~ .check {
 .c-card {
   overflow: hidden;
   background: white;
-  padding-top: 40px;
-  padding-bottom: 0px;
-  border-radius: 16px;
+  padding-top: 2.5rem;
+  padding-bottom: 0rem;
+  border-radius: 1rem;
   box-shadow: var(--global-card-boxShadow);
 }
 
@@ -860,12 +861,12 @@ input#fahrenheit:checked ~ .check {
 }
 
 .c-card__footer {
-  border-top: 1px solid #e2e3e7;
+  border-top: var(--global-borderWidth) solid #e2e3e7;
   color: #757787;
 }
 
 .c-card__title {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .c-card__body > *:last-child,
@@ -877,10 +878,10 @@ input#fahrenheit:checked ~ .check {
 
 @media (min-width: 27em) {
   .c-card__body {
-    padding: 48px;
+    padding: 3rem;;
   }
   .c-card__title {
-    margin-bottom: 48px;
+    margin-bottom: 3rem;;
   }
 }
 
@@ -957,14 +958,14 @@ input#fahrenheit:checked ~ .check {
   appearance: none;
   width: 100%;
 
-  border-radius: 8px;
-  border: hidden 1px;
+  border-radius: 0.5rem;
+  border: hidden var(--global-borderWidth);
 
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 
   font-family: inherit;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: calc(var(--global-baseline) * 3);
 
   padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth))
@@ -972,7 +973,7 @@ input#fahrenheit:checked ~ .check {
 
   outline: none;
   transition: var(--input-transition);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .c-input:hover {
@@ -1009,7 +1010,7 @@ more padding on the right to avoid overlap
 
 .c-label {
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   float: left;
   padding-bottom: var(--global-whitespace-sm);
   line-height: calc(var(--global-baseline) * 2);
@@ -1042,7 +1043,7 @@ more padding on the right to avoid overlap
 
   border: none;
   outline: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 
   background-color: rgba(12, 12, 12, 0.9);
   color: #fff;
@@ -1108,23 +1109,23 @@ more padding on the right to avoid overlap
 }
 
 .u-mb-xs {
-  margin-bottom: 4px !important;
+  margin-bottom: 0.25rem !important;
 }
 
 .u-mb-sm {
-  margin-bottom: 8px !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .u-mb-md {
-  margin-bottom: 16px !important;
+  margin-bottom: 1rem !important;
 }
 
 .u-mb-lg {
-  margin-bottom: 32px !important;
+  margin-bottom: 2rem !important;
 }
 
 .u-mb-xl {
-  margin-bottom: 48px !important;
+  margin-bottom: 3rem; !important;
 }
 
 /*
@@ -1172,9 +1173,6 @@ more padding on the right to avoid overlap
     Utility classes to create smaller or bigger test
 */
 
-.u-text-sm {
-  font-size: 14px;
-}
 
 /*
     Utility: Widths
@@ -1448,7 +1446,7 @@ No media query since this is the default in mobile first design
   }
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: var(--global-borderWidth) solid #999;
     page-break-inside: avoid;
   }
   /*
