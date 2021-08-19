@@ -755,6 +755,7 @@ input#fahrenheit:checked ~ .check {
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto auto;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .grid-item {
