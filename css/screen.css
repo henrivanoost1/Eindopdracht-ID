@@ -767,6 +767,15 @@ input#fahrenheit:checked ~ .check {
 
 .grid-item-title {
   font-weight: 900;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.grid-pic {
+  height: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--global-whitespace-sm);
 }
 
 /* only for iPhone 5S and SE :) */
