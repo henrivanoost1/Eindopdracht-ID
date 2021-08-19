@@ -32,24 +32,15 @@
   </head>
   <body>
     <section class="o-row u-pt-clear">
-      <div class="o-container">
+      <div class="o-container c-container u-max-width--xl o-box">
         <h1 class="c-logo">Machelen Weerradar</h1>
         <div class="c-intro">
           <h3 class="c-date-text">
-            <span class="datetime"></span>
+            <span class="datetime c-weerradar"></span>
           </h3>
         </div>
-      </div>
-    </section>
-
-    <section class="o-row o-row--body u-pt-clear u-text-align-center">
-      <div class="o-container u-max-width--xl o-box">
-        <div
-          class="o-layout o-layout--justify-center o-layout--align-center c-card"
-        >
-          <div
-            class="o_layout__item u-1-of-2-bp2 o-container u-pt-clear o-row o-layout--align-center"
-          >
+        <div class="o-layout c-card">
+          <div class="c-details o_layout__item u-pt-clear o-row">
             <div id="thermometer">
               <div class="track">
                 <div class="goal">
@@ -83,21 +74,30 @@
                     <input
                       type="radio"
                       name="name"
-                      class=""
+                      class="c-input-radio"
                       id="celsius"
                       value="celsius"
                       onclick="changetoCelsius()"
                       checked
                     />
-                    <label for="celsius">Celsius</label>
+                    <label
+                      for="celsius"
+                      onclick="changetoCelsius()"
+                      class="c-input-radio"
+                      >Celsius</label
+                    >
 
-                    <div class="check"></div>
+                    <div
+                      class="check c-input-radio"
+                      onclick="changetoCelsius()"
+                    ></div>
                   </li>
 
                   <li>
                     <input
                       type="radio"
                       name="name"
+                      class="c-input-radio"
                       id="fahrenheit"
                       value="fahrenheit"
                       class="js-fahrenheitbtn"
@@ -113,14 +113,16 @@
               </div>
             </div>
           </div>
-          <div
-            class="o_layout__item u-1-of-2-bp2 c-info u-pt-clear o-row o-layout--align-center o-container"
-          >
+          <div class="o_layout__item c-info u-pt-clear o-row">
             <div class="c-icon" id="icon">
               <img id="wicon" class="wicon" src="" alt="weer icoon" />
             </div>
             <p class="js-desc c-subtitle-description">test</p>
             <p class="js-temptext c-subtitle-description">test</p>
+            <p class="js-feels c-subtitle-description">test</p>
+            <p class="js-humidity c-subtitle-description">test</p>
+            <p class="js-pressure c-subtitle-description">test</p>
+            <p class="js-wind-speed c-subtitle-description">test</p>
           </div>
         </div>
       </div>

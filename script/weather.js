@@ -39,22 +39,36 @@ const thermo= function thermometer(goalAmount, progressAmount, animate) {
 
 let tempValue;
 
+//nieuwe api= https://api.openweathermap.org/data/2.5/onecall?lat=50.9195&lon=3.4486&exclude=current&appid=8f75b63f8f0ecae4cff5946fa4e452bd
+
 const fetchData = function() {
-  fetch('https://api.openweathermap.org/data/2.5/weather?q=Zulte&lang=nl&units=metric&appid=8f75b63f8f0ecae4cff5946fa4e452bd')
+  fetch('https://api.openweathermap.org/data/2.5/onecall?lat=50.9195&lon=3.4486&exclude=current&lang=nl&units=metric&appid=8f75b63f8f0ecae4cff5946fa4e452bd')
+  
   .then(response => response.json())
   .then(data => {
     console.log(data)
-    tempValue = data['main']['temp'];
-    let descValue = data['weather'][0]['description'];
-    let icon= data['weather'][0]['icon'];
+    tempValue = Math.round(data['hourly'][0]['temp']);
+    let descValue = data['hourly'][0]['weather'][0]['description'];
+    let icon= data['hourly'][0]['weather'][0]['icon'];
     let iconurl="img/svg/" + icon + ".svg";
+    let feeling=Math.round(data['hourly'][0]['feels_like']);
+    let humidity=Math.round(data['hourly'][0]['humidity']);
+    let pressure=Math.round(data['hourly'][0]['pressure']);
+    let wind_speed=Math.round(((data['hourly'][0]['wind_speed'])*3600)/1000);
+
+    
     console.log(icon)
     console.log(tempValue)
     console.log(descValue)
   
     document.querySelector(".js-temp").innerHTML=tempValue+"°C";
-    document.querySelector(".js-temptext").innerHTML=tempValue+"°C";
+    document.querySelector(".js-temptext").innerHTML="Temperatuur: "+tempValue+"°C";
     document.querySelector(".js-desc").innerHTML=descValue;
+    document.querySelector(".js-feels").innerHTML="Gevoelstemperatuur: "+feeling+"°C";
+    document.querySelector(".js-humidity").innerHTML="Luchtvochtigheid: "+humidity+"%";
+    document.querySelector(".js-pressure").innerHTML="Luchtdruk: "+pressure+"hPa";
+    document.querySelector(".js-wind-speed").innerHTML="Windsnelheid: "+wind_speed+"km/h";
+
     $('#wicon').attr('src', iconurl);
     thermo();
 
@@ -76,7 +90,7 @@ const fetchData = function() {
 
  function changetoFahrenheit(){
 
-    TemperatuurHuidig= (tempValue*1.8)+32;
+    TemperatuurHuidig= Math.round((tempValue*1.8)+32);
   
     document.querySelector(".js-top").innerHTML="122°F";
     document.querySelector(".js-middel").innerHTML="0°F";
