@@ -37,7 +37,9 @@ const thermo= function thermometer(goalAmount, progressAmount, animate) {
   }
 }
 
+let descValue;
 let tempValue;
+let feeling;
 
 //nieuwe api= https://api.openweathermap.org/data/2.5/onecall?lat=50.9195&lon=3.4486&exclude=current&appid=8f75b63f8f0ecae4cff5946fa4e452bd
 
@@ -48,10 +50,10 @@ const fetchData = function() {
   .then(data => {
     console.log(data)
     tempValue = Math.round(data['hourly'][0]['temp']);
-    let descValue = data['hourly'][0]['weather'][0]['description'];
+    descValue = data['hourly'][0]['weather'][0]['description'];
     let icon= data['hourly'][0]['weather'][0]['icon'];
     let iconurl="img/svg/" + icon + ".svg";
-    let feeling=Math.round(data['hourly'][0]['feels_like']);
+    feeling=Math.round(data['hourly'][0]['feels_like']);
     let humidity=Math.round(data['hourly'][0]['humidity']);
     let pressure=Math.round(data['hourly'][0]['pressure']);
     let wind_speed=Math.round(((data['hourly'][0]['wind_speed'])*3600)/1000);
@@ -62,8 +64,8 @@ const fetchData = function() {
     console.log(descValue)
   
     document.querySelector(".js-temp").innerHTML=tempValue+"°C";
-    document.querySelector(".js-temptext").innerHTML="Temperatuur: "+tempValue+"°C";
-    document.querySelector(".js-desc").innerHTML=descValue;
+    // document.querySelector(".js-temptext").innerHTML="Temperatuur: "+tempValue+"°C";
+    document.querySelector(".js-desc").innerHTML=tempValue+"°C & "+descValue;
     document.querySelector(".js-feels").innerHTML="Gevoelstemperatuur: "+feeling+"°C";
     document.querySelector(".js-humidity").innerHTML="Luchtvochtigheid: "+humidity+"%";
     document.querySelector(".js-pressure").innerHTML="Luchtdruk: "+pressure+"hPa";
@@ -91,12 +93,17 @@ const fetchData = function() {
  function changetoFahrenheit(){
 
     TemperatuurHuidig= Math.round((tempValue*1.8)+32);
+    FeelsHuidig= Math.round((feeling*1.8)+32);
   
     document.querySelector(".js-top").innerHTML="122°F";
     document.querySelector(".js-middel").innerHTML="0°F";
     document.querySelector(".js-bottom").innerHTML="-86°F";
     document.querySelector(".js-temp").innerHTML=TemperatuurHuidig+"°F";
-    document.querySelector(".js-temptext").innerHTML=TemperatuurHuidig+"°F";
+    document.querySelector(".js-desc").innerHTML=TemperatuurHuidig+"°F & "+descValue;
+
+    // document.querySelector(".js-temptext").innerHTML=TemperatuurHuidig+"°F";
+
+    document.querySelector(".js-feels").innerHTML="Gevoelstemperatuur: "+FeelsHuidig+"°F";
 
  }
 
@@ -106,7 +113,10 @@ const fetchData = function() {
     document.querySelector(".js-middel").innerHTML="0°C";
     document.querySelector(".js-bottom").innerHTML="-30°C";
     document.querySelector(".js-temp").innerHTML=tempValue+"°C";
-    document.querySelector(".js-temptext").innerHTML=tempValue+"°C";
+    document.querySelector(".js-desc").innerHTML=TemperatuurHuidig+"°C & "+descValue;
+
+    // document.querySelector(".js-temptext").innerHTML=tempValue+"°C";
+    document.querySelector(".js-feels").innerHTML="Gevoelstemperatuur: "+feeling+"°C";
 
  }
 
