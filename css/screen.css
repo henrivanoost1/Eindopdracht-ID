@@ -724,7 +724,7 @@ input#fahrenheit:checked ~ .check {
 .c-subtitle-description {
   font-weight: 600;
   line-height: var(--global-whitespace);
-  font-size: var(--global-whitespace-lg);
+  font-size: 1.7rem;
   margin-bottom: var(--global-whitespace-lg);
   align-self: center;
   align-content: center;
@@ -890,6 +890,8 @@ input#fahrenheit:checked ~ .check {
   align-self: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
 
   /* margin-top: 2.5rem; */
   margin-bottom: var(--global-whitespace-md);
@@ -955,7 +957,7 @@ input#fahrenheit:checked ~ .check {
 .c-card {
   /* overflow: hidden;
   justify-content: center; */
-  width: 100%;
+  width: 75%;
   text-align: center;
   align-self: center;
   justify-content: center;
