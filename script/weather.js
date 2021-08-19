@@ -66,10 +66,10 @@ const fetchData = function() {
     document.querySelector(".js-temp").innerHTML=tempValue+"°C";
     // document.querySelector(".js-temptext").innerHTML="Temperatuur: "+tempValue+"°C";
     document.querySelector(".js-desc").innerHTML=tempValue+"°C & "+descValue;
-    document.querySelector(".js-feels").innerHTML="Gevoelstemperatuur: "+feeling+"°C";
-    document.querySelector(".js-humidity").innerHTML="Luchtvochtigheid: "+humidity+"%";
-    document.querySelector(".js-pressure").innerHTML="Luchtdruk: "+pressure+"hPa";
-    document.querySelector(".js-wind-speed").innerHTML="Windsnelheid: "+wind_speed+"km/h";
+    document.querySelector(".js-feels").innerHTML=feeling+"°C";
+    document.querySelector(".js-humidity").innerHTML=humidity+"%";
+    document.querySelector(".js-pressure").innerHTML=pressure+"hPa";
+    document.querySelector(".js-wind-speed").innerHTML=wind_speed+"km/h";
 
     $('#wicon').attr('src', iconurl);
     thermo();
@@ -103,7 +103,7 @@ const fetchData = function() {
 
     // document.querySelector(".js-temptext").innerHTML=TemperatuurHuidig+"°F";
 
-    document.querySelector(".js-feels").innerHTML="Gevoelstemperatuur: "+FeelsHuidig+"°F";
+    document.querySelector(".js-feels").innerHTML=FeelsHuidig+"°F";
 
  }
 
@@ -116,7 +116,7 @@ const fetchData = function() {
     document.querySelector(".js-desc").innerHTML=TemperatuurHuidig+"°C & "+descValue;
 
     // document.querySelector(".js-temptext").innerHTML=tempValue+"°C";
-    document.querySelector(".js-feels").innerHTML="Gevoelstemperatuur: "+feeling+"°C";
+    document.querySelector(".js-feels").innerHTML=feeling+"°C";
 
  }
 

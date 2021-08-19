@@ -750,6 +750,24 @@ input#fahrenheit:checked ~ .check {
   font-size: var(--global-whitespace-xl);
 }
 
+.c-parameters {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  margin-top: 3rem;
+}
+
+.grid-item {
+  padding: 0rem;
+  font-size: 1rem;
+  text-align: center;
+  height: 1rem;
+}
+
+.grid-item-title {
+  font-weight: 900;
+}
+
 /* only for iPhone 5S and SE :) */
 @media (max-width: 320px) {
   .c-subtext {
@@ -1392,7 +1410,7 @@ more padding on the right to avoid overlap
     justify-self: center;
     text-align: center;
     align-self: center;
-    grid-column: 3/ 2;
+
     height: 100%;
     width: 100%;
     vertical-align: center;
@@ -1436,7 +1454,6 @@ more padding on the right to avoid overlap
 
   .c-details {
     float: right;
-    grid-column: 1/ 2;
   }
 }
 
