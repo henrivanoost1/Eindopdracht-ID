@@ -84,6 +84,18 @@ const fetchData = function() {
     document.querySelector(".datetime").innerHTML=dt.toLocaleDateString();
   }
 
+  const fillList=function(){
+    const lists = document.querySelectorAll('.c-coming'); 
+
+    lists.forEach(el => {
+      const listItems = el.querySelectorAll('.item');
+      const n = el.children.length;
+      el.style.setProperty('--total', n);
+    });
+  }
+
+  
+
 
  const enableEventListeners= function(){
   let fahrenheit= document.querySelector(".btnChangeTemp");
@@ -113,7 +125,7 @@ const fetchData = function() {
     document.querySelector(".js-middel").innerHTML="0°C";
     document.querySelector(".js-bottom").innerHTML="-30°C";
     document.querySelector(".js-temp").innerHTML=tempValue+"°C";
-    document.querySelector(".js-desc").innerHTML=TemperatuurHuidig+"°C & "+descValue;
+    document.querySelector(".js-desc").innerHTML=tempValue+"°C & "+descValue;
 
     // document.querySelector(".js-temptext").innerHTML=tempValue+"°C";
     document.querySelector(".js-feels").innerHTML=feeling+"°C";
@@ -123,8 +135,10 @@ const fetchData = function() {
 document.addEventListener('DOMContentLoaded', function() {
   console.info('JS loaded');
   datefix();
+
   
   fetchData();
+  fillList();
   enableEventListeners();
   
   
