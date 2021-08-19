@@ -333,11 +333,11 @@ h2 {
 input[type="radio"] {
   position: absolute;
   overflow: hidden;
-  
+
   width: 100%;
 }
-.c-input-radio{
-  width:100%;
+.c-input-radio {
+  width: 100%;
 }
 
 label {
@@ -360,7 +360,6 @@ input#celsius ~ .check {
   transform: translate(-3.125rem, -1.5625rem);
 
   background: #00c8ff52;
-  
 }
 input#fahrenheit ~ .check {
   transform: translate(-3.125rem, -5.7rem);
@@ -433,13 +432,13 @@ input#fahrenheit:checked ~ .check {
 .o-row {
   position: relative;
   vertical-align: right;
-  align-self:right;
+  align-self: right;
   /* padding: 1rem 1rem 0; */
 }
 
 .o-row--body {
   /* min-height: 100vh; */
-  display:grid;
+  display: grid;
   align-items: center;
 }
 
@@ -481,10 +480,10 @@ input#fahrenheit:checked ~ .check {
 .o-container {
   display: grid;
   margin-left: auto;
-  
+
   margin-right: auto;
   margin-bottom: var(--global-whitespace-lg);
-  margin-top:var(--global-whitespace-lg);
+  margin-top: var(--global-whitespace-lg);
 
   max-width: 90%; /* 79.5 * 1rem = 1272 */
   width: 100%;
@@ -510,13 +509,13 @@ input#fahrenheit:checked ~ .check {
 @media (min-width: 768px) {
   .o-section--lg + .o-section--lg,
   .o-section--xl + .o-section--xl {
-    padding-top: 3rem;;
+    padding-top: 3rem;
   }
 }
 
 @media (min-width: 992px) {
   .o-section--xl + .o-section--xl {
-    padding-top: 2.5rem;;
+    padding-top: 2.5rem;
   }
 }
 
@@ -538,9 +537,6 @@ input#fahrenheit:checked ~ .check {
   justify-self: center;
   text-align: center;
   align-self: center;
-
-
-  
 }
 
 .o-layout__item {
@@ -563,11 +559,11 @@ input#fahrenheit:checked ~ .check {
 }
 
 .o-layout--gutter-sm {
-  margin: 0 -0.375rem;;
+  margin: 0 -0.375rem;
 }
 
 .o-layout--gutter-sm > .o-layout__item {
-  padding: 0 0.375rem;;
+  padding: 0 0.375rem;
 }
 
 .o-layout--gutter-lg {
@@ -579,11 +575,11 @@ input#fahrenheit:checked ~ .check {
 }
 
 .o-layout--gutter-xl {
-  margin: 0 -3rem;;
+  margin: 0 -3rem;
 }
 
 .o-layout--gutter-xl > .o-layout__item {
-  padding: 0 3rem;;
+  padding: 0 3rem;
 }
 
 /* reverse horizontal row modifier */
@@ -839,13 +835,13 @@ input#fahrenheit:checked ~ .check {
   display: grid;
   align-items: center;
   justify-content: center;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: var(--global-whitespace-lg);
   height: var(--global-whitespace);
   min-width: 100%;
-  font-weight:900;
-  color:#000;
+  font-weight: 900;
+  color: #000;
 }
 
 .c-logo_page1 {
@@ -853,16 +849,12 @@ input#fahrenheit:checked ~ .check {
   color: white;
 }
 
-.c-weerradar{
-  color:black !important ;
-  font-weight:300;
-  
-  
+.c-weerradar {
+  color: black !important ;
+  font-weight: 300;
 }
 
-
 .c-icon {
-  
   justify-content: center;
   align-content: center;
   justify-self: center;
@@ -877,7 +869,7 @@ input#fahrenheit:checked ~ .check {
 }
 
 .card-align {
-  display:grid;
+  display: grid;
   align-items: left;
   justify-content: center;
 }
@@ -887,7 +879,7 @@ input#fahrenheit:checked ~ .check {
 }
 
 @media (min-width: 768px) {
-  .c-icon{
+  .c-icon {
     width: 10rem;
     margin-left: auto;
     margin-right: auto;
@@ -936,27 +928,26 @@ input#fahrenheit:checked ~ .check {
   /* overflow: hidden;
   justify-content: center; */
   width: 100%;
-  text-align:center;
+  text-align: center;
   align-self: center;
   justify-content: center;
   align-content: center;
   justify-self: center;
-  
+
   /* padding-top: 0rem;
   padding-bottom: 0rem; */
-  
 }
 
-.c-buttons{
+.c-buttons {
   overflow: hidden;
   justify-content: left;
   margin-top: var(--global-whitespace-xl);
-  
+
   padding-top: 0rem;
   padding-bottom: 0rem;
 }
 
-.c-container{
+.c-container {
   background: white;
   border-radius: 1rem;
   box-shadow: var(--global-card-boxShadow);
@@ -988,7 +979,7 @@ input#fahrenheit:checked ~ .check {
     padding: 1rem;
   }
   .c-card__title {
-    margin-bottom: 3rem;;
+    margin-bottom: 3rem;
   }
 }
 
@@ -1185,19 +1176,14 @@ more padding on the right to avoid overlap
   background-color: black;
 }
 
-.c-details{
+.c-details {
   justify-content: center;
   align-content: center;
   justify-self: center;
   text-align: center;
   align-self: center;
   grid-column: 1/ 2;
-  
 }
-
-
-
-
 
 /*------------------------------------*\
 #UTILITIES
@@ -1248,7 +1234,7 @@ more padding on the right to avoid overlap
 }
 
 .u-mb-xl {
-  margin-bottom: 3rem; !important;
+  margin-bottom: 3rem !important;
 }
 
 /*
@@ -1295,7 +1281,6 @@ more padding on the right to avoid overlap
     Utilities: text
     Utility classes to create smaller or bigger test
 */
-
 
 /*
     Utility: Widths
@@ -1386,12 +1371,12 @@ more padding on the right to avoid overlap
   .u-5-of-6-bp1 {
     width: 83.3333333333% !important;
   }
-  .c-details{
+  .c-details {
     float: right;
     grid-column: 1/ 2;
   }
-  
-/*   
+
+  /*   
   .c-info{
     float:right;
     align-items: center;
@@ -1401,7 +1386,7 @@ more padding on the right to avoid overlap
 
   } */
 
-  .c-info{
+  .c-info {
     justify-content: center;
     align-content: center;
     justify-self: center;
@@ -1411,8 +1396,6 @@ more padding on the right to avoid overlap
     height: 100%;
     width: 100%;
     vertical-align: center;
-    
-    
   }
 }
 
@@ -1451,7 +1434,7 @@ more padding on the right to avoid overlap
     width: 83.3333333333% !important;
   }
 
-  .c-details{
+  .c-details {
     float: right;
     grid-column: 1/ 2;
   }
