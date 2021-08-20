@@ -951,10 +951,36 @@ ul ~ .c-coming {
   width: 10rem;
 }
 
+.c-icon-list {
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  text-align: center;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+
+  /* margin-top: 2.5rem; */
+  margin-bottom: var(--global-whitespace-md);
+  width: 4.5rem;
+}
+
 .card-align {
   display: grid;
   align-items: left;
   justify-content: center;
+}
+.item {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.c-list-param {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
 }
 
 .wicon {
@@ -982,6 +1008,10 @@ ul ~ .c-coming {
 @media (min-width: 432px) {
   .c-logo {
     font-size: 2rem;
+  }
+  .c-list-param {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 
   .c-logo_page1 {

@@ -41,6 +41,7 @@ let descValue;
 let tempValue;
 let feeling;
 
+
 //nieuwe api= https://api.openweathermap.org/data/2.5/onecall?lat=50.9195&lon=3.4486&exclude=current&appid=8f75b63f8f0ecae4cff5946fa4e452bd
 
 const fetchData = function() {
@@ -59,6 +60,34 @@ const fetchData = function() {
     let wind_speed=Math.round(((data['hourly'][0]['wind_speed'])*3600)/1000);
 
     
+
+    for(let i=0; i<8;i++){
+
+      let tempDay = Math.round(data['daily'][i]['temp']['day']);
+      let unixstamp= (data['daily'][i]['dt']);
+      console.log(unixstamp)
+      var date= new Date(unixstamp*1000);
+      var month= (date.getUTCMonth()+1).toString();
+      var day= date.getUTCDate().toString();
+      console.log("dag test: "+day+"/"+month);
+      let temp=".js-temp"+i;
+      let datetime=".js-dayname"+i;
+
+      let icon1= data['daily'][i]['weather'][0]['icon'];
+      let iconurl1="img/svg/" + icon1 + ".svg";
+      document.querySelector(temp).innerHTML=tempDay+" °C";
+      document.querySelector(datetime).innerHTML=day+"/"+month;
+
+      $('#wicon'+i).attr('src', iconurl1);
+
+
+      console.log(tempDay);
+      console.log("teller"+i);
+
+
+    }
+
+    
     console.log(icon)
     console.log(tempValue)
     console.log(descValue)
@@ -73,6 +102,7 @@ const fetchData = function() {
 
     $('#wicon').attr('src', iconurl);
     thermo();
+    
 
   
   })
@@ -142,7 +172,8 @@ document.addEventListener('DOMContentLoaded', function() {
   enableEventListeners();
   
   
+  
 
-  thermo();
+  
   
 });
