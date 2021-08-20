@@ -9,6 +9,9 @@
 
 :root {
   --global-color-neutral-x-light: #b5b6c0;
+  --global-color-blue-light: #00c9ff;
+  --global-color-blue-dark: #00c8ff52;
+  --global-color-green: #92fe9d;
   --global-fontSize: 16px;
 
   /* border radius */
@@ -56,7 +59,11 @@ html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+  background: linear-gradient(
+    90deg,
+    var(--global-color-blue-light) 0%,
+    var(--global-color-green) 100%
+  );
 }
 
 *,
@@ -66,13 +73,21 @@ html {
 }
 
 ::-moz-selection {
-  background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+  background: linear-gradient(
+    90deg,
+    var(--global-color-blue-light) 0%,
+    var(--global-color-green) 100%
+  );
   color: white;
   text-shadow: none;
 }
 
 ::selection {
-  background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+  background: linear-gradient(
+    90deg,
+    var(--global-color-blue-light) 0%,
+    var(--global-color-green) 100%
+  );
   color: white;
   text-shadow: none;
 }
@@ -181,7 +196,7 @@ hr {
 }
 
 a {
-  color: #3385ff;
+  color: var(--global-color-blue-light);
   transition: all 0.1s ease-in-out;
 }
 
@@ -206,13 +221,13 @@ input {
   top: 0;
 }
 #thermometer .amount {
-  border-top: var(--global-borderWidth) solid #00c9ff;
+  border-top: var(--global-borderWidth) solid var(--global-color-blue-light);
   display: inline-block;
 
   font-weight: bold;
 }
 #thermometer .progress .amount {
-  border-top: 4.6875rem solid#00c9ff;
+  border-top: 4.6875rem solid var(--global-color-blue-light);
 
   left: 0;
 
@@ -224,7 +239,7 @@ input {
   position: relative;
 }
 #thermometer .track {
-  background: #e5e5e5 none repeat scroll 0 0;
+  background: lightgray none repeat scroll 0 0;
 
   border-radius: 0.5rem;
   height: 17.5rem;
@@ -234,7 +249,7 @@ input {
   width: 1.875rem;
 }
 #thermometer .progress {
-  background: #00c9ff none repeat scroll 0 0;
+  background: var(--global-color-blue-light) none repeat scroll 0 0;
   border-radius: 1.5rem 1.5rem 0 0;
   bottom: 0;
   height: 0;
@@ -261,13 +276,13 @@ input {
   margin-top: 10.9375rem;
 }
 #thermometer .amount {
-  border-top: var(--global-borderWidth) solid#00c9ff;
+  border-top: var(--global-borderWidth) solid var(--global-color-blue-light);
   display: inline-block;
 
   padding: 0 4.6875rem 0 0;
 }
 #thermometer .progress .amount {
-  border-top: var(--global-borderWidth) solid#00c9ff;
+  border-top: var(--global-borderWidth) solid var(--global-color-blue-light);
   left: 0;
   padding: 0 0 0 4.6875rem;
   position: absolute;
@@ -368,11 +383,11 @@ label {
 input#celsius ~ .check {
   transform: translate(-3.125rem, -1.5625rem);
 
-  background: #00c8ff52;
+  background: var(--global-color-blue-dark);
 }
 input#fahrenheit ~ .check {
   transform: translate(-3.125rem, -5.7rem);
-  background: #00c9ff;
+  background: var(--global-color-blue-light);
   box-shadow: 0 0.375rem 0.75rem rgba(33, 150, 243, 0.35);
 }
 
