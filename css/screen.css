@@ -65,19 +65,13 @@ html {
   box-sizing: inherit;
 }
 
-/*
-* #Background color
-*/
-
 ::-moz-selection {
-  /* background: #3385ff; */
   background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
   color: white;
   text-shadow: none;
 }
 
 ::selection {
-  /* background: #3385ff; */
   background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
   color: white;
   text-shadow: none;
@@ -213,23 +207,20 @@ input {
 }
 #thermometer .amount {
   border-top: var(--global-borderWidth) solid #00c9ff;
-  /* color: black; */
   display: inline-block;
 
   font-weight: bold;
-  /* padding: 0 4.6875rem 0 0; */
 }
 #thermometer .progress .amount {
   border-top: 4.6875rem solid#00c9ff;
-  /* color: #006600; */
+
   left: 0;
-  /* padding: 0 0 0 4.6875rem; */
+
   position: absolute;
 }
 #thermometer {
   border-radius: 0.75rem;
-  /* height: 300px;
-  margin-top: 140px; */
+
   position: relative;
 }
 #thermometer .track {
@@ -237,7 +228,6 @@ input {
 
   border-radius: 0.5rem;
   height: 17.5rem;
-  /* left: 0.625rem; */
   margin: 0 auto;
   position: relative;
   top: 0.625rem;
@@ -272,15 +262,12 @@ input {
 }
 #thermometer .amount {
   border-top: var(--global-borderWidth) solid#00c9ff;
-  /* color: black; */
   display: inline-block;
-  /* font-family: Trebuchet MS;
-  font-weight: bold; */
+
   padding: 0 4.6875rem 0 0;
 }
 #thermometer .progress .amount {
   border-top: var(--global-borderWidth) solid#00c9ff;
-  /* color: #006600; */
   left: 0;
   padding: 0 0 0 4.6875rem;
   position: absolute;
@@ -308,18 +295,40 @@ h2 {
   font-weight: 900;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+  border: solid 2rem transparent;
+  scroll-margin-left: 1rem;
+  scroll-margin-right: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+  background: whitesmoke;
+  border: solid 2rem transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkgray;
+  border-radius: 1rem;
+  border: solid 2rem transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(83, 83, 83);
+}
 /* Card
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .card {
-  /* display: flex;
-  flex-direction: column; */
   background: var(--white);
   width: 50%;
   margin-top: 3.125rem;
-  /* margin-right: 0 !important ; */
   padding: 1.25rem 1.5625rem;
   border-radius: 1.25rem;
-  /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13); */
   float: left;
   justify-content: left;
   align-content: left;
@@ -410,17 +419,6 @@ input#fahrenheit:checked ~ .check {
 
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
-}
-
-.o-hide-accessible {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }
 
 /*
@@ -735,7 +733,7 @@ input#fahrenheit:checked ~ .check {
 .c-subtitle {
   font-weight: 600;
   line-height: var(--global-whitespace);
-  font-size: var(--global-whitespace);
+  font-size: 1.6rem;
   margin-bottom: var(--global-whitespace-md);
 }
 
@@ -821,8 +819,6 @@ ul ~ .c-coming {
 
 .c-coming > li ~ .c-coming,
 .item {
-  /* scroll-snap-align: center; */
-  /* padding: calc(1rem / 2 * 1.5rem); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1038,17 +1034,12 @@ ul ~ .c-coming {
 */
 
 .c-card {
-  /* overflow: hidden;
-  justify-content: center; */
   width: 75%;
   text-align: center;
   align-self: center;
   justify-content: center;
   align-content: center;
   justify-self: center;
-
-  /* padding-top: 0rem;
-  padding-bottom: 0rem; */
 }
 
 .c-buttons {
@@ -1064,11 +1055,6 @@ ul ~ .c-coming {
   background: white;
   border-radius: 1rem;
   box-shadow: var(--global-card-boxShadow);
-}
-
-.c-card__body,
-.c-card__footer {
-  /* padding: var(--global-whitespace); */
 }
 
 .c-card__footer {
@@ -1136,7 +1122,6 @@ ul ~ .c-coming {
     Everything form related here
 */
 .c-form {
-  /* min-height: 70vh; */
   display: grid;
   align-content: center;
   justify-content: center;
@@ -1489,16 +1474,6 @@ more padding on the right to avoid overlap
     grid-column: 1/ 2;
   }
 
-  /*   
-  .c-info{
-    float:right;
-    align-items: center;
-    align-self: center;
-    width: auto;
-    grid-column: 2/ 2;
-
-  } */
-
   .c-info {
     justify-content: center;
     align-content: center;
@@ -1700,10 +1675,7 @@ No media query since this is the default in mobile first design
     border: var(--global-borderWidth) solid #999;
     page-break-inside: avoid;
   }
-  /*
-    * Printing Tables:
-    * http://css-discuss.incutio.com/wiki/Printing_Tables
-    */
+
   thead {
     display: table-header-group;
   }
